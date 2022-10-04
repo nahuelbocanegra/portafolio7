@@ -1,0 +1,360 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color :#020403;
+    color:#ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+  
+}
+header {
+    padding: 0.75rem 1rem;
+    height: 40px;
+}
+/*------HEADER*------*/
+.header--nav {
+    display: flex;
+    justify-content: end;
+   
+}
+.header--icon {
+    width: 20px;
+    
+}
+.Items {
+    color: #020403;
+    text-decoration: none
+}
+.Items:hover {
+    color: #ffffff;
+}
+.nav--list{
+   position: absolute; 
+   background-color: #adadad;
+   width: 100%;
+   right: 0;
+   top: 40px;
+   height: calc(100vh - 40px);
+   list-style: none;
+   padding: 1.5rem 1rem;
+   display: none;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+#btn-menu:checked~.nav--list {
+    display: flex;
+}
+
+input {
+    display: none;
+}
+@media screen and (min-width:800px) {
+    header{
+        height: 80px;
+    }
+    .header--icon {
+        display: none;
+    }
+
+    .nav--list {
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        height: 80px;
+        padding: 1rem;
+        padding-right: 4rem;
+        gap: 1rem;
+        background-color: #000402;
+        box-shadow: 1px 1px 25px 1px #454444;
+
+    }
+
+    .Items {
+        color: #adadad;
+    }
+
+    .nav--list>li {
+        padding-right: 1.5rem;
+
+    }
+
+}
+
+/*------MAIN------*/
+
+.section-main>img{
+    margin-top: 2rem;
+}
+.section-main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+.main-text>h2{
+    font-size:25px;
+    color:#adadad
+}
+.main-text>h1{
+    font-size: 40px;
+}
+.main-redes{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 3rem;
+}
+.main-redes>a>img{
+    width: 35px;
+    height: 35px; 
+    
+    
+   
+}
+.main-redes>a:hover{
+    cursor: pointer;
+}
+.main-person>h2{
+    font-size: 25px;
+    margin-bottom: 1.25rem;
+}
+.main-person>p{
+    text-align: center;
+    padding: 15px;
+    color:#adadad;
+    
+
+}
+.main-habilidad>h2{
+    margin-bottom:1rem ;
+}
+.main-habilidad{
+    position: relative;
+    z-index: -1;
+}
+.list-habilidad{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    list-style: none;
+    gap:2rem;
+    grid-template-areas: 
+     "uno"
+     "dos"
+     "tres"
+     "cuatro";
+    padding: 5px;
+    
+  
+}
+.list-habilidad>li{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.list-habilidad>li>h4{
+    font-size: 12px;
+    margin-top: 10px;
+    max-width: 110px;
+    color:#adadad;
+}
+.list-habilidad>li>div{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(27, 11, 2, 0.936);  
+}
+.uno{
+    grid-area: uno;
+}
+.dos{
+    grid-area: dos;
+}
+.tres{
+    grid-area: tres;
+}
+.cuatro{
+    grid-area: cuatro;
+}
+@media screen and (min-width:450px) {
+    .main-text>h1{
+        max-width: 400px;
+    }
+}
+@media screen and (min-width:700px) { 
+  .main-redes {    
+        gap: 3rem;
+    }
+    .main-person>p{
+        max-width: 550px;
+    }
+    .list-habilidad {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 2rem 5rem;
+        grid-template-areas:
+                "uno dos"
+                "tres cuatro";
+        padding: 10px;
+    }
+}
+/*------ASIDE------*/
+.aside{
+    padding: 5px;
+}
+
+.element-aside>div {
+    width: 150px;
+    margin-left: 2rem;  
+}
+.aside-section>h2{
+    margin-bottom: 1rem; 
+}
+.aside-section{
+    text-align: center;
+    margin: 3rem 0;
+}
+.element-aside{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 40px;
+    text-align: start;
+    margin-bottom:4px ; 
+    gap: 1rem;
+
+}
+.list-aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.a1{
+    border-bottom:1px solid #5b5959;
+}
+.text-b{
+    font-weight: 600;
+}
+.element-aside>p,
+.text-a{
+    color:#adadad;
+    font-weight: 500;
+}
+.section-portafolio{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 1rem;
+}
+.section-portafolio>article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
+    padding: 5px;
+    margin-top: 1.5rem;
+}
+.section-portafolio>article>img{
+    width: 280px;
+}
+@media screen  and (min-width:800px){
+    .element-aside{
+        justify-content:space-between;
+       align-items: flex-end;
+       width: 400px;
+    }
+
+   
+    .section-portafolio>h2{
+        text-align: center;
+    }
+    .section-portafolio>article{
+      
+      flex-direction:row ;
+      justify-content:center;
+      align-items: center;
+      gap: 30px;
+      
+    }
+   .section-portafolio>article>img {
+       width: 250px;
+   }
+}
+
+/*------FOOTER------*/
+
+footer{
+  padding: 10px;
+}
+.address{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 10px;
+    text-align: center;
+    gap:1rem;
+    margin-bottom: 3rem;
+}
+@media screen and (min-width:500px) {
+    .address{
+      justify-content: center;
+      gap:3rem;
+    }
+    .address>div>img {
+            width: 70px;
+            height: 70px;
+            border: 1px solid grey;
+            padding: 10px;
+            border-radius: 45%;
+            
+    }
+    .title-footer{
+        text-align: center;
+   }
+}
+.title-footer {
+    margin: 3rem 0 1rem 0;
+}
+.address>div>img{
+    width: 50px;
+    height: 50px;
+    border:1px solid grey;
+    padding: 10px;
+    border-radius: 45%;
+       
+}
+.address>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+footer>p{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.info-address{
+    font-size: 10px;
+    color: #adadad;
+}
+.title-address{
+    font-size: 12px;
+    color:#adadad
+}
